@@ -106,5 +106,19 @@ for element in list1:
 for key,value in list1.items():
     print(key,value)
 
+matriz=[[1,2,3],
+        [4,5,6],
+        [7,8,9]]
 
+print(matriz[0][1])
 
+for row in matriz:
+    print(row) # Imprime 1,2,3
+    for column in row:
+        print(column) # Imprime 1/2/3 ,todo para abajo
+
+print((8 / 2) + 4 * 8)
+
+elem=[1,2,3,4,5,6,7,8,9,10]
+for elem in elem:
+        print(elem)
