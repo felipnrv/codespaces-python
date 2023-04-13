@@ -35,4 +35,16 @@ print(size)
 print(txt.swapcase())
 print(txt.startswith('Ho'))
 print(txt.endswith('ao'))
+print(txt.replace('Hola','Adios'))
+print(txt.capitalize())
 
+text="Hola mundo"
+print(text[0])
+print(text[1])
+print(text[1:5])
+print(text[:10])
+#Da saltos en el texto
+print(text[1:5:2])
+
+types=[1,2,3,4,5,'z',7,'y',9,'x']
+print(types)
