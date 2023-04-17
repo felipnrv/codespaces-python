@@ -65,3 +65,15 @@ print(numbers)
 numbers_v2=[element * 2 for element in range (1,11)]
 print(numbers_v2)
 
+dict={}
+for i in range (1,11):
+    dict[i]=i*2
+
+print(dict)
+
+dictv2={i: i*2 for i in range(1,5)}
+print(dictv2)
+# stash es para guardar cambios pero sin hacer commit 
+
+
+
