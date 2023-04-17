@@ -1,5 +1,7 @@
 # import this #Imprime el Zen de Python
 
+import random
+
 set_paises = {'España', 'Francia', 'Alemania', 'Italia',
               'Portugal', 'España', 1, 1, 2, 3, 4.2, False}
 # Imprime el conjunto de paises sin repetir, se puede colocar cualquier tipo de dato
@@ -74,6 +76,27 @@ print(dict)
 dictv2={i: i*2 for i in range(1,5)}
 print(dictv2)
 # stash es para guardar cambios pero sin hacer commit 
+
+countries={'Ec','Pe','Co','Gr','Fr'}
+population={}
+
+for country in countries: 
+    population[country]=random.randint(1,1000)
+
+print(population)
+
+names=['nico','zule','santi']
+ages=[20,30,40]
+
+"""{
+    'nico':20,
+    'zule':30,
+    'santi':40
+
+}"""
+
+print(list(zip(names,ages)))
+
 
 
 
