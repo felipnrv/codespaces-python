@@ -41,6 +41,17 @@ set_union=set_a.union(set_b)
 print(set_union)
 print(set_a | set_b) #Otra forma de hacer union
 
+set_union=set_a.intersection(set_b)
+print(set_union)
+print(set_a & set_b) #Otra forma de hacer interseccion
+
+set_union=set_a.difference(set_b)
+print(set_union)
+print(set_a - set_b) #Otra forma de hacer diferencia
+
+set_union=set_a.symmetric_difference(set_b)
+print(set_union)
+print(set_a ^ set_b) #Otra forma de hacer diferencia simetrica
 
 
 
