@@ -34,6 +34,13 @@ print(set_paises)
 set_paises.clear()
 print(set_paises)
 
+set_a={'Colombia','Peru','Ecuador','Venezuela','Chile'}
+set_b={'Argentina','Brasil','Paraguay','Uruguay','Chile'}
+
+set_union=set_a.union(set_b)
+print(set_union)
+print(set_a | set_b) #Otra forma de hacer union
+
 
 
 
