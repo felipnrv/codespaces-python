@@ -75,12 +75,12 @@ print(dict)
 
 dictv2={i: i*2 for i in range(1,5)}
 print(dictv2)
-# stash es para guardar cambios pero sin hacer commit 
+# stash es para guardar cambios pero sin hacer commit
 
 countries={'Ec','Pe','Co','Gr','Fr'}
 population={}
 
-for country in countries: 
+for country in countries :
     population[country]=random.randint(1,1000)
 
 print(population)
@@ -105,7 +105,3 @@ print(populationv2)
 
 result={country:population for (country,population) in populationv2.items() if population > 20}
 print(result)
-
-
-
-
