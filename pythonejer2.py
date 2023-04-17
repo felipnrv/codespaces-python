@@ -100,6 +100,8 @@ print(list(zip(names,ages)))
 new_dict={name:ages for (name,ages) in zip(names,ages)}
 print(new_dict)
 
+## Otro ejercicio
+ 
 populationv2={country: random.randint(1,100) for country in countries }
 print(populationv2)
 
