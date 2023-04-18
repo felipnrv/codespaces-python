@@ -1,5 +1,9 @@
 import random
 
+''' Tuplas son similares a las listas pero no se pueden modificar se usa parentesis() 
+Las listas son mutables se usa corchetes[]
+En los direccionarios se usa llaves{} y sirven para guardar datos de forma clave-valor '''
+
 print("Hello world")
 #Comentarios 
 """Comentarios

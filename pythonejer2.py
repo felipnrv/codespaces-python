@@ -2,6 +2,7 @@
 
 import random
 
+
 set_paises = {'España', 'Francia', 'Alemania', 'Italia',
               'Portugal', 'España', 1, 1, 2, 3, 4.2, False}
 # Imprime el conjunto de paises sin repetir, se puede colocar cualquier tipo de dato
@@ -99,6 +100,7 @@ ages=[20,30,40]
 
 }"""
 
+#ZIP retorna una lista de tuplas (x,y) 
 print(list(zip(names,ages)))
 
 new_dict={name:ages for (name,ages) in zip(names,ages)}
@@ -112,4 +114,8 @@ print(populationv2)
 result={country:population for (country,population) in populationv2.items() if population > 20}
 print(result)
 
+names=['nico','zule','santi']
+ages=[21,34,47]
+
+print(list(zip(names,ages)))
 
