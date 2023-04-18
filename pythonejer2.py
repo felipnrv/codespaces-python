@@ -67,9 +67,13 @@ print(numbers)
 numbers_v2=[element * 2 for element in range (1,11)]
 print(numbers_v2)
 
-dict={}
+dict = {}
 for i in range (1,11):
     dict[i]=i*2
+
+print(dict)
+
+dict = {dict[i]:i*2 for i in range (1,5)}
 
 print(dict)
 
@@ -101,9 +105,14 @@ new_dict={name:ages for (name,ages) in zip(names,ages)}
 print(new_dict)
 
 ## Otro ejercicio
- 
+
 populationv2={country: random.randint(1,100) for country in countries }
 print(populationv2)
 
 result={country:population for (country,population) in populationv2.items() if population > 20}
 print(result)
+
+
+
+
+
