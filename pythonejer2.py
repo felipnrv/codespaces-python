@@ -113,6 +113,3 @@ result={country:population for (country,population) in populationv2.items() if p
 print(result)
 
 
-
-
-
