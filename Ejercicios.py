@@ -2,7 +2,9 @@ import random
 
 ''' Tuplas son similares a las listas pero no se pueden modificar se usa parentesis() 
 Las listas son mutables se usa corchetes[]
-En los direccionarios se usa llaves{} y sirven para guardar datos de forma clave-valor '''
+En los direccionarios se usa llaves{} y sirven para guardar datos de forma clave-valor 
+Set es el unico que no se puede repetir los valores,no es ordenado y 
+no se puede acceder a los valores por indice ,se usa llaves{}'''
 
 print("Hello world")
 #Comentarios 

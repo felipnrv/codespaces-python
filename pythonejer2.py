@@ -115,7 +115,16 @@ result={country:population for (country,population) in populationv2.items() if p
 print(result)
 
 names=['nico','zule','santi']
-ages=[21,34,47]
+age=[21,34,47]
 
-print(list(zip(names,ages)))
+print(list(zip(names,age)))
+
+new_dict={names:ages for (names,age)in zip(names,age)}
+print(new_dict)
+
+text='Hola soy Felipe'
+unique={c: c.upper() for c in text if c in 'aeiou' }
+print(unique)
+
+
 
