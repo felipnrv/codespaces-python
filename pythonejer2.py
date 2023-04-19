@@ -319,5 +319,64 @@ full_name=lambda name,lastname: f'Full name es {name.title()}, {lastname.title()
 text=full_name('felipe','garcia')
 print(text)
 
+def high_ord_func(x,func):
+    return x + func(x)
+
+high_ord_func= lambda x,func:x + func(x)
+
+result=high_ord_func(2,incrementv2)
+print(result)
+
+result=high_ord_func(2,incrementv2)
+print(result)
+result=high_ord_func(2,lambda x:x+2 )
+print(result)
+result=high_ord_func(2,lambda x:x*3 )
+print(result)
+
+# map es una funcion que recibe una funcion y un iterable y retorna un iterable
+# sirve para aplicar una funcion a cada elemento de un iterable
+
+numbers=[1,2,3,4,5]
+numbers_v2=[]
+for i in numbers:
+    numbers_v2.append(i*2)
+
+numbers_v3=list(map(lambda i:i*2,numbers))
+
+print(numbers)
+print(numbers_v2)
+print(numbers_v3)
+
+numbers1=[1,2,3,4,5]
+numbers2=[6,7,8,9,10]
+
+result=list(map(lambda x,y:x+y,numbers1,numbers2))
+print(result)
+
+items=[{
+    'name':'laptop',
+    'price':1000
+},
+{
+    'name':'mouse',
+    'price':50  
+},
+{
+    'name':'monitor',
+    'price':500
+}
+    ]
+
+prices=list(map(lambda item:item['price'],items))
+print(prices)
+
+def taxes(item):
+    item['price'] = item['price'] * 1.9
+    return item
+
+new_items=list(map(taxes,items))
+print(new_items)
+
 
 
