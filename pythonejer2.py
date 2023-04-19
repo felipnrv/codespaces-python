@@ -294,4 +294,19 @@ print (result)
 result2=sum_with_range(result , result+10)
 print(result2)
 
+#Las variables locales no se pueden modificar desde fuera de la funcion
+#Las variables globales si se pueden modificar desde dentro de la funcion
+
+price=100
+
+def increment():
+    price=200
+    result=price+50
+    print(result)
+    return result
+
+print(price)
+price2 = increment()
+print(price2)
+
 
