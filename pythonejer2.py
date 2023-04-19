@@ -309,4 +309,15 @@ print(price)
 price2 = increment()
 print(price2)
 
+#lambda es una funcion anonima que sirve para hacer una funcion en una sola linea
+
+incrementv2=lambda x: x+1
+print(incrementv2(10))
+
+full_name=lambda name,lastname: f'Full name es {name.title()}, {lastname.title()}'
+
+text=full_name('felipe','garcia')
+print(text)
+
+
 
