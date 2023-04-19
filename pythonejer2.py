@@ -287,8 +287,11 @@ def sum_with_range (min,max):
     sum=0
     for x in range(min,max):
         sum += x
-    print(sum)
+    return sum
 
-sum_with_range(1,10)
-sum_with_range(2,8)
+result=sum_with_range(1,10)
+print (result)
+result2=sum_with_range(result , result+10)
+print(result2)
+
 
