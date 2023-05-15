@@ -445,3 +445,28 @@ result = functools.reduce(accum,numbers)
 
 print(result)
 
+import sys
+print(sys.path)
+
+#la libreria re sirve para hacer busquedas en un string
+import re
+text = 'Mi numero de telefono es 099 87 31 56, el codigo del pais es 593, mi numero de suerte es 4'
+result = re.findall('[0-9]+',text)
+print(result)
+
+#la libreria time sirve para trabajar con fechas
+import time
+timestamp = time.time() 
+local = time.localtime()
+result = time.asctime(local)
+print(timestamp)
+print(result)
+
+#collections sirve para trabajar con colecciones de datos
+import collections 
+numbers = [1,2,1,1,2,1,4,5,3,3,21]
+#counter sirve para contar elementos de una lista
+counter = collections.Counter(numbers) 
+print(counter)
+
+
