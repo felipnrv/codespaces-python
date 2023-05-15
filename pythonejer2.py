@@ -382,6 +382,8 @@ print(new_items)
 # lamba es una funcion anonima que sirve para hacer una funcion en una sola linea
 # sirve para hacer funciones que no se van a volver a usar
 
+
+#filter sirve para filtrar elementos de un iterable
 numbers = [1,2,3,4,5]
 new_numbers = list(filter(lambda x: x %2 == 0, numbers))
 print(new_numbers)
