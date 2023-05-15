@@ -384,6 +384,7 @@ print(new_items)
 
 
 #filter sirve para filtrar elementos de un iterable
+'''
 numbers = [1,2,3,4,5]
 new_numbers = list(filter(lambda x: x %2 == 0, numbers))
 print(new_numbers)
@@ -416,3 +417,31 @@ new_list=list(filter(lambda item:
     item['home_team_result'] == 'Win',matches))
 print(new_list)
 print(len(new_list))
+
+
+def filter_by_length(words):
+   # Escribe tu solución 👇
+   return list(filter(lambda palabras: len(palabras) >= 4,words))
+
+words = ['amor', 'sol', 'piedra', 'día']
+response = filter_by_length(words)
+print(response)
+'''
+
+#reduce sirve para reducir un iterable a un solo valor
+#Se usa para sumar todos los elementos de una lista y 
+# obtener un solo valor
+
+import functools
+
+numbers = [1,2,3,4]
+
+def accum(counter,item):
+    print("counter => ",counter)
+    print("item => ",item)
+    return counter + item 
+
+result = functools.reduce(accum,numbers)
+
+print(result)
+
