@@ -261,7 +261,7 @@ unique={c: c.upper() for c in text if c in 'aeiou' }
 print(unique)
 '''
 
-def myprint():
+'''def myprint():
     print('Hola mundo')
     print('Hola con todos')
 
@@ -377,6 +377,40 @@ def taxes(item):
 
 new_items=list(map(taxes,items))
 print(new_items)
+'''
 
+# lamba es una funcion anonima que sirve para hacer una funcion en una sola linea
+# sirve para hacer funciones que no se van a volver a usar
 
+numbers = [1,2,3,4,5]
+new_numbers = list(filter(lambda x: x %2 == 0, numbers))
+print(new_numbers)
 
+matches = [
+    {
+    'home_team':'Colombia',
+    'away_team':'Peru',
+    'home_score':1,
+    'away_score':0,
+    'home_team_result':'Win',
+
+    },
+    {'home_team':'Ecuador',
+    'away_team':'Bolivia',
+    'home_score':1,
+    'away_score':0,
+    'home_team_result':'Draw',},
+
+    {'home_team':'Argentina',
+     'away_team':'Chile',
+     'home_score':1,
+     'away_score':0,
+     'home_team_result':'Lose',},
+]
+print(matches)
+print(len(matches))
+
+new_list=list(filter(lambda item: 
+    item['home_team_result'] == 'Win',matches))
+print(new_list)
+print(len(new_list))
