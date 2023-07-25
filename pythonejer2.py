@@ -462,11 +462,22 @@ result = time.asctime(local)
 print(timestamp)
 print(result)
 
+"""
+
 #collections sirve para trabajar con colecciones de datos
 import collections 
 numbers = [1,2,1,1,2,1,4,5,3,3,21]
 #counter sirve para contar elementos de una lista
 counter = collections.Counter(numbers) 
 print(counter)
+
+import cv2
+import time
+
+img = cv2.imread("Azure Internet.jpg")
+i=time.strftime("%d-%m-%y_%H-%M-%S")
+cv2.imwrite(i+'.jpg', img)
+
+"""
 
 
