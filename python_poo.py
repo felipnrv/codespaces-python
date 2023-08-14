@@ -226,7 +226,7 @@ class Estudiante(Persona):
 estudiante=Estudiante("Juan","24","10mo")
 estudiante.mostrar_datos()
 
-'''
+
 class Animal:
     def comer(self):
         print("El animal esta comiendo")
@@ -248,3 +248,5 @@ ave.volar()
 #murcielago.comer()
 #murcielago.amamantar()
 #murcielago.volar()
+'''
+#Polimorfismo
