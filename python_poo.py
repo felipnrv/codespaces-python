@@ -8,7 +8,8 @@ class Celular:
         self.camara=camara
 
 celu1=Celular("Samsumg","A35","40MP")
-celu2=Celular("Apple","IPhone","82MP") #Atributos de instancia se lo pasamos cuando creamos el objeto 
+celu2=Celular("Apple","IPhone","82MP") 
+#Atributos de instancia se lo pasamos cuando creamos el objeto 
 
 #print(celu2.modelo)
 
@@ -117,7 +118,7 @@ roberto=Empleado("Roberto",43,"Argentino","Programador",1000)
 
 roberto.hablar()
 
-'''
+#Herencia multiple
 
 class Persona:
     def __init__(self,nombre,edad,nacionalidad):
@@ -131,8 +132,10 @@ class Persona:
 class Artista:
     def __init__(self,habilidad):
         self.habilidad=habilidad
+
     def mostrar_habilidad(self):
-        print(f"Mi habilidad es: {self.habilidad}")
+        return f"Mi habilidad es: {self.habilidad}"
+        #pass
 
 class Estudiante(Persona):
     def __init__(self, nombre, edad, nacionalidad,notas,universidad):
@@ -146,5 +149,102 @@ class EmpleadoArtista(Persona,Artista):
         Artista.__init__(self,habilidad)
         self.salario=salario
         self.empresa=empresa
+
     def presentarse(self):
-        print(f'{super().mostrar_habilidad()}')
+        print(f'Hola soy:{self.nombre}, Mi habilidad es {self.mostrar_habilidad()}, trabajo en la empresa {self.empresa}')
+
+roberto=EmpleadoArtista("Roberto",21,"Peru",1000,"Google","Pintar")
+
+#roberto es una instancia de empleadoartista y artista porque hereda de artista y personas
+herencia=issubclass(EmpleadoArtista,Artista)
+instacia =isinstance(roberto,Artista)
+
+roberto.presentarse()
+print(instacia)
+
+#MRO (Method Resolution Order)
+
+class A:
+    def hablar(self):
+        print("Hola desde A")
+class B(A):
+    def hablar(self):
+        print("Hola desde B")
+class C(A):
+    def hablar(self):
+        print("Hola desde C")
+class D(B,C):
+    def hablar(self):
+        print("Hola desde D")
+
+
+#Se crea un objeto        
+d=D()
+#1 se llama a D, luego a B y C, despues en A, es porque D hereda B y C de A, si no lo haria se saltaria al siguiente 
+d.hablar()
+
+#En este caso 1 va D, luego a B ,y A , como no hereda de A no va hacia C 
+class A:
+    def hablar(self):
+        print("Hola desde A")
+class F:
+     def hablar(self):
+          print("Hola desde F")
+class B(A):
+    def hablar(self):
+        print("Hola desde B")
+class C(F):
+    def hablar(self):
+        print("Hola desde C")
+class D(B,C):
+    def hablar(self):
+        print("Hola desde D")
+        
+d=D()
+#Se pone D porque es la clase que hereda todo 
+#Se pasa F.hablar(d) se pasa d=self, se llama a cada clase
+F.hablar(d)
+#d.hablar()
+#print(D.mro())
+
+class Persona:
+    def __init__(self,nombre,edad):
+        self.nombre=nombre
+        self.edad=edad
+    def mostrar_datos(self):
+        print(f'Nombre: {self.nombre}')
+        print(f'Edad: {self.edad}')
+
+class Estudiante(Persona):
+    def __init__(self, nombre,edad,grado):
+        super().__init__(nombre,edad)
+        self.grado=grado
+
+    def mostrar_datos(self):
+        print(f"Grado: {self.grado}")
+
+estudiante=Estudiante("Juan","24","10mo")
+estudiante.mostrar_datos()
+
+'''
+class Animal:
+    def comer(self):
+        print("El animal esta comiendo")
+class Ave(Animal):
+    def volar(self):
+        print("El animal esta volando")
+class Mamifero(Animal):
+    def amamantar(self):
+        print("El animal esta comiendo") 
+
+class Murcielago(Mamifero,Ave):
+    pass
+
+ave = Ave()
+ave.comer()
+ave.volar()
+
+#murcielago=Murcielago()
+#murcielago.comer()
+#murcielago.amamantar()
+#murcielago.volar()
