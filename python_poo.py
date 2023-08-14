@@ -61,8 +61,8 @@ while True:
     if(estudiar.lower()=="estudiar"):
         estudiante.estudiar()
         break
-'''
-#Herencia
+
+#Herencia Simple
 #La clase hijo accede a todos los metodos y propiedades de la clase padre
 
 class Persona:
@@ -79,7 +79,72 @@ class Empleado(Persona):
        super().__init__(nombre,edad,nacionalidad)
        self.trabajo=trabajo
        self.salario=salario
+    #Reescribio el metodo hablar()
+    def hablar(self):
+        print("Chao, me fui... ")
 
 roberto=Empleado("Roberto",43,"Argentino","Programador",1000)
 
 roberto.hablar()
+
+
+#Herencia jerarquica 
+#Una clase es padre de muchas sub clases
+
+
+class Persona:
+    def __init__(self,nombre,edad,nacionalidad):
+        self.nombre=nombre
+        self.edad=edad
+        self.nacionalidad=nacionalidad
+
+    def hablar(self):
+        print("Hola, estoy hablando.... ")
+
+class Empleado(Persona):
+    def __init__(self,nombre,edad,nacionalidad,trabajo,salario):
+       super().__init__(nombre,edad,nacionalidad)
+       self.trabajo=trabajo
+       self.salario=salario
+    
+class Estudiante(Persona):
+    def __init__(self, nombre, edad, nacionalidad,notas,universidad)
+        super().__init__(nombre,edad,nacionalidad)
+        self.notas=notas
+        self.universidad=universidad
+            
+roberto=Empleado("Roberto",43,"Argentino","Programador",1000)
+
+roberto.hablar()
+
+'''
+
+class Persona:
+    def __init__(self,nombre,edad,nacionalidad):
+        self.nombre=nombre
+        self.edad=edad
+        self.nacionalidad=nacionalidad
+
+    def hablar(self):
+        print("Hola, estoy hablando.... ")
+
+class Artista:
+    def __init__(self,habilidad):
+        self.habilidad=habilidad
+    def mostrar_habilidad(self):
+        print(f"Mi habilidad es: {self.habilidad}")
+
+class Estudiante(Persona):
+    def __init__(self, nombre, edad, nacionalidad,notas,universidad):
+        super().__init__(nombre, edad, nacionalidad)
+        self.notas=notas
+        self.universidad=universidad
+
+class EmpleadoArtista(Persona,Artista):
+    def __init__(self, nombre, edad, nacionalidad,salario,empresa,habilidad):
+        Persona.__init__(self,nombre, edad, nacionalidad)
+        Artista.__init__(self,habilidad)
+        self.salario=salario
+        self.empresa=empresa
+    def presentarse(self):
+        print(f'{super().mostrar_habilidad()}')
